@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RExl - Real Estate Excel Tools</title>
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+        .section {
+            padding: 3rem 0;
+        }
+        .card {
+            height: 100%;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .file-preview {
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">RExl</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#python">Python Scripts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vba">VBA Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#excel">Excel Files</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#getting-started">Getting Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>RExl - Real Estate Excel Tools</h1>
+                    <p class="lead">A comprehensive suite of Python scripts and VBA macros for generating professional real estate analysis Excel workbooks.</p>
+                    <a href="#getting-started" class="btn btn-primary">Get Started</a>
+                    <a href="https://github.com/ibuilder/RExl" class="btn btn-outline-secondary ms-2">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400?text=RExl+Dashboard" alt="RExl Dashboard" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Python Scripts Section -->
+    <div class="section bg-light" id="python">
+        <div class="container">
+            <h2 class="text-center mb-5">Python Scripts</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <i class="fas fa-building text-primary"></i> Development Budget Generator
+                            </h3>
+                            <h6 class="card-subtitle mb-2 text-muted">development-budget-generator.py</h6>
+                            <p class="card-text">Creates a detailed real estate development budget with summary, detailed budget, and forecast sheets.</p>
+                            <h5>Features:</h5>
+                            <ul>
+                                <li>Comprehensive budget structure (hard costs, soft costs, other costs)</li>
+                                <li>Line-item detail with cost per square foot analysis</li>
+                                <li>Visual budget breakdown with pie charts</li>
+                                <li>Configurable project details (name, address, size, type)</li>
+                            </ul>
+                            <h5>Usage:</h5>
+                            <div class="code-block">
+                                python py/development-budget-generator.py
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <i class="fas fa-calculator text-primary"></i> Mortgage Calculator Generator
+                            </h3>
+                            <h6 class="card-subtitle mb-2 text-muted">mortgage-calculator-generator.py</h6>
+                            <p class="card-text">Generates a mortgage calculator workbook with payment schedules, loan comparison, and affordability analysis.</p>
+                            <h5>Features:</h5>
+                            <ul>
+                                <li>Principal & interest calculation</li>
+                                <li>Amortization schedule</li>
+                                <li>Loan comparison tool</li>
+                                <li>Affordability calculator based on income</li>
+                            </ul>
+                            <h5>Usage:</h5>
+                            <div class="code-block">
+                                python py/mortgage-calculator-generator.py
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <h4>Running All Scripts</h4>
+                <p>To run all Python scripts and generate all Excel files at once:</p>
+                <div class="code-block">
+                    python run_all_scripts.py
+                </div>
+                <div class="alert alert-info mt-3">
+                    <i class="fas fa-info-circle"></i> Output files will be saved to the <code>xl</code> folder by default.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VBA Code Section -->
+    <div class="section" id="vba">
+        <div class="container">
+            <h2 class="text-center mb-5">VBA Code</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Available Modules</h3>
+                    <div class="list-group mb-4">
+                        <div class="list-group-item">
+                            <h5 class="mb-1">RealEstateAnalysis.bas</h5>
+                            <p class="mb-1">Core functions for real estate analysis</p>
+                        </div>
+                        <div class="list-group-item">
+                            <h5 class="mb-1">PropertyValuation.bas</h5>
+                            <p class="mb-1">Methods for valuing properties using various approaches</p>
+                        </div>
+                        <div class="list-group-item">
+                            <h5 class="mb-1">CashflowProjections.bas</h5>
+                            <p class="mb-1">Routines for calculating and visualizing cash flows</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Installation Instructions</h3>
+                    <ol class="list-group list-group-numbered mb-4">
+                        <li class="list-group-item">Open your Excel workbook</li>
+                        <li class="list-group-item">Press Alt + F11 to open the VBA editor</li>
+                        <li class="list-group-item">Right-click on your project in the Project Explorer</li>
+                        <li class="list-group-item">Select "Import File" and navigate to the desired VBA module</li>
+                        <li class="list-group-item">Save the workbook as .xlsm (macro-enabled)</li>
+                    </ol>
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle"></i> Remember to enable macros when opening your workbook.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Excel Files Section -->
+    <div class="section bg-light" id="excel">
+        <div class="container">
+            <h2 class="text-center mb-5">Generated Excel Files</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="file-preview">
+                        <h3>
+                            <i class="fas fa-file-excel text-success"></i> Real_Estate_Development_Budget.xlsx
+                        </h3>
+                        <img src="https://via.placeholder.com/500x300?text=Development+Budget+Preview" alt="Development Budget Preview" class="img-fluid rounded mb-3">
+                        <h5>Key Components:</h5>
+                        <ul>
+                            <li>Summary overview of total development costs</li>
+                            <li>Detailed budget with line-item costs</li>
+                            <li>Time-based forecast for project spending</li>
+                            <li>Cost per square foot analysis</li>
+                        </ul>
+                        <p>A comprehensive development budget workbook for real estate projects that helps developers and project managers track and forecast all project costs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="file-preview">
+                        <h3>
+                            <i class="fas fa-file-excel text-success"></i> Mortgage_Calculator.xlsx
+                        </h3>
+                        <img src="https://via.placeholder.com/500x300?text=Mortgage+Calculator+Preview" alt="Mortgage Calculator Preview" class="img-fluid rounded mb-3">
+                        <h5>Key Components:</h5>
+                        <ul>
+                            <li>Loan amount, rate, and term inputs</li>
+                            <li>Monthly payment calculator</li>
+                            <li>Complete amortization schedule</li>
+                            <li>Loan comparison tool</li>
+                            <li>Affordability analysis based on income</li>
+                        </ul>
+                        <p>An interactive mortgage calculator that helps borrowers understand payment scenarios, compare different loan options, and determine affordability based on income.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="xl/" class="btn btn-outline-primary">Browse All Excel Files</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Getting Started Section -->
+    <div class="section" id="getting-started">
+        <div class="container">
+            <h2 class="text-center mb-5">Getting Started</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <i class="fas fa-clipboard-list text-primary"></i> Prerequisites
+                            </h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Python 3.6 or higher</li>
+                                <li class="list-group-item">Microsoft Excel (2016 or newer recommended)</li>
+                                <li class="list-group-item">Required Python package: openpyxl</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <i class="fas fa-download text-primary"></i> Installation
+                            </h3>
+                            <ol>
+                                <li class="mb-3">
+                                    <strong>Clone the repository:</strong>
+                                    <div class="code-block">
+                                        git clone https://github.com/yourusername/RExl.git
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <strong>Navigate to the project directory:</strong>
+                                    <div class="code-block">
+                                        cd RExl
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <strong>Install required dependencies:</strong>
+                                    <div class="code-block">
+                                        pip install -r requirements.txt
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Run the scripts:</strong>
+                                    <div class="code-block">
+                                        python run_all_scripts.py
+                                    </div>
+                                    <p class="mt-2">This will generate all Excel files in the <code>xl</code> folder.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h3>Customization</h3>
+                <p>You can customize the generated Excel files by modifying the Python scripts:</p>
+                <ul>
+                    <li>Adjust budget categories in <code>development-budget-generator.py</code></li>
+                    <li>Modify default mortgage parameters in <code>mortgage-calculator-generator.py</code></li>
+                    <li>Add new line items or calculation methods as needed</li>
+                </ul>
+                <div class="alert alert-success">
+                    <i class="fas fa-lightbulb"></i> <strong>Pro Tip:</strong> Make a backup of your scripts before modifying them.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>RExl - Real Estate Excel Tools</h5>
+                    <p>A collection of Python scripts and VBA macros for generating professional real estate analysis Excel workbooks.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#python" class="text-white">Python Scripts</a></li>
+                        <li><a href="#vba" class="text-white">VBA Code</a></li>
+                        <li><a href="#excel" class="text-white">Excel Files</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/yourusername/RExl" class="text-white">GitHub Repository</a></li>
+                        <li><a href="#" class="text-white">Documentation</a></li>
+                        <li><a href="#" class="text-white">Report Issues</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>This project is licensed under the MIT License.</p>
+                <p>© 2025 RExl Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
